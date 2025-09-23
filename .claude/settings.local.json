@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build:*)",
+      "Bash(npm test:*)",
+      "Bash(npm install:*)",
+      "Bash(mkdir:*)",
+      "Bash(touch:*)",
+      "mcp__neon__list_projects",
+      "mcp__neon__get_database_tables",
+      "mcp__neon__describe_table_schema",
+      "mcp__neon__run_sql_transaction"
+    ],
+    "deny": [],
+    "ask": []
+  },
+  "enableAllProjectMcpServers": false,
+  "outputStyle": "default"
+}
