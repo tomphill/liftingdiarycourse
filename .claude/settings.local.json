@@ -10,9 +10,13 @@
       "mcp__neon__get_database_tables",
       "mcp__neon__describe_table_schema",
       "mcp__neon__run_sql_transaction",
-      "Bash(git merge:*)",
+      "Bash(npm run lint)",
+      "Bash(npx shadcn@latest add:*)",
+      "Bash(git checkout:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git merge:*)",
+      "Bash(git fetch:*)"
     ],
     "deny": [],
     "ask": []
