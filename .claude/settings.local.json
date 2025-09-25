@@ -13,7 +13,9 @@
       "Bash(npm run lint)",
       "Bash(npx shadcn@latest add:*)",
       "Bash(git checkout:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git fetch:*)"
     ],
     "deny": [],
     "ask": []
