@@ -11,7 +11,9 @@
       "mcp__neon__describe_table_schema",
       "mcp__neon__run_sql_transaction",
       "Bash(npm run lint)",
-      "Bash(npx shadcn@latest add:*)"
+      "Bash(npx shadcn@latest add:*)",
+      "Bash(git checkout:*)",
+      "Bash(git add:*)"
     ],
     "deny": [],
     "ask": []
