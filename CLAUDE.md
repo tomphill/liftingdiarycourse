@@ -17,10 +17,12 @@ This is a Next.js 15.5.3 application with TypeScript and Tailwind CSS v4, using 
 
 **IMPORTANT**: When generating any code, ALWAYS first refer to the relevant documentation files within the `/docs` directory to understand existing patterns, conventions, and best practices before implementation:
 
-- /docs/ui.md
-- /docs/data-fetching.md
 - /docs/auth.md
+- /docs/data-fetching.md
 - /docs/data-mutations.md
+- /docs/routing.md
+- /docs/server-components.md
+- /docs/ui.md
 
 ## Architecture
 
