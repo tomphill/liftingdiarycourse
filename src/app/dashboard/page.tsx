@@ -3,6 +3,7 @@ import { format } from "date-fns";
 import { CalendarClient } from "./calendar-client";
 import { Button } from "@/components/ui/button";
 import { Suspense } from "react";
+import Link from "next/link";
 
 interface DashboardPageProps {
   searchParams: Promise<{ date?: string }>;
@@ -45,9 +46,10 @@ async function DashboardContent({ searchParams }: { searchParams: { date?: strin
         <div className="space-y-4">
           {workouts.length > 0 ? (
             workouts.map((workout) => (
-              <div
+              <Link
                 key={workout.id}
-                className="border rounded-lg p-4 hover:shadow-md transition-shadow"
+                href={`/dashboard/workout/${workout.id}`}
+                className="block border rounded-lg p-4 hover:shadow-md transition-shadow"
               >
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="font-semibold text-lg">{workout.name}</h3>
@@ -70,7 +72,7 @@ async function DashboardContent({ searchParams }: { searchParams: { date?: strin
                     )}
                   </div>
                 </div>
-              </div>
+              </Link>
             ))
           ) : (
             <div className="border rounded-lg p-8 text-center">
