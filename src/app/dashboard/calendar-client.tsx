@@ -1,11 +1,21 @@
 "use client";
 
+import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { format } from "date-fns";
+import { CalendarIcon } from "lucide-react";
 import { Calendar } from "@/components/ui/calendar";
+import { Button } from "@/components/ui/button";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
 export function CalendarClient() {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const [open, setOpen] = useState(false);
 
   const parseDateFromString = (dateString: string): Date => {
     const [year, month, day] = dateString.split('-').map(Number);
@@ -27,19 +37,28 @@ export function CalendarClient() {
     const params = new URLSearchParams(searchParams);
     params.set("date", formatDateToString(date));
     router.push(`/dashboard?${params.toString()}`);
+    setOpen(false);
   };
 
   return (
-    <div className="space-y-4">
-      <h2 className="text-xl font-semibold">Select Date</h2>
-      <div className="border rounded-lg p-4">
+    <Popover open={open} onOpenChange={setOpen}>
+      <PopoverTrigger asChild>
+        <Button
+          variant="outline"
+          className="justify-start text-left font-normal"
+        >
+          <CalendarIcon className="mr-2 h-4 w-4" />
+          {format(selectedDate, "do MMM yyyy")}
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent className="w-auto p-0" align="start">
         <Calendar
           mode="single"
           selected={selectedDate}
           onSelect={handleDateSelect}
           className="rounded-md"
         />
-      </div>
-    </div>
+      </PopoverContent>
+    </Popover>
   );
 }
