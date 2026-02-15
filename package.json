@@ -9,7 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@clerk/nextjs": "^6.32.0",
+    "@clerk/nextjs": "^6.37.4",
     "@hookform/resolvers": "^5.2.2",
     "@neondatabase/serverless": "^1.0.1",
     "@radix-ui/react-alert-dialog": "^1.1.15",
@@ -26,12 +26,12 @@
     "dotenv": "^17.2.2",
     "drizzle-orm": "^0.44.5",
     "lucide-react": "^0.544.0",
-    "next": "15.5.3",
+    "next": "16.1.6",
     "next-themes": "^0.4.6",
     "postgres": "^3.4.7",
-    "react": "19.1.0",
+    "react": "19.2.4",
     "react-day-picker": "^9.11.0",
-    "react-dom": "19.1.0",
+    "react-dom": "19.2.4",
     "react-hook-form": "^7.63.0",
     "tailwind-merge": "^3.3.1",
     "zod": "^4.1.11"
