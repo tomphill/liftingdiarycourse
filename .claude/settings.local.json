@@ -17,7 +17,8 @@
       "Bash(git commit:*)",
       "Bash(git merge:*)",
       "Bash(git fetch:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(python3:*)"
     ],
     "deny": [],
     "ask": []
